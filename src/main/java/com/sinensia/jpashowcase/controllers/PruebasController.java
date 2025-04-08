@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sinensia.jpashowcase.ejemplo_01.Libro;
+import com.sinensia.jpashowcase.ejemplo_02.Juguete;
+import com.sinensia.jpashowcase.repositories.JugueteRepository;
 import com.sinensia.jpashowcase.repositories.LibroRepository;
 
 @RestController
@@ -16,6 +18,14 @@ public class PruebasController {
 
 	@Autowired
 	private LibroRepository libroRepository;
+	
+	@Autowired
+	private JugueteRepository jugueteRepository;
+	
+	@GetMapping("/juguetes")
+	public List<Juguete> getJuguetes(){
+		return jugueteRepository.findAll();
+	}
 	
 	@GetMapping("/libros")
 	public List<Libro> getLibros(){
