@@ -1,3 +1,32 @@
+INSERT INTO VEHICULOS (MATRICULA, MARCA) VALUES 
+('3445FTT', 'Piaggio'),
+('7889DSS', 'SEAT'),
+('4982MBB', 'Yamaha'),
+('1299JHH', 'SEAT'),
+('2600JDK', 'CITROEN'),
+('1010KLR', 'VOLKSWAGEN');
+
+INSERT INTO COCHES (MATRICULA, NUMERO_PUERTAS) VALUES 
+('7889DSS', 5),
+('1299JHH', 3),
+('2600JDK', 5),
+('1010KLR', 5);
+
+INSERT INTO MOTOS (MATRICULA, PATA_CABRA) VALUES
+('3445FTT', TRUE),
+('4982MBB', FALSE);
+
+INSERT INTO NOTICIAS (ID, TITULO, SUBTITULO) VALUES 
+(10, 'Un cliente muerde a un perro en un famoso centro comercial...', 'En circunstancias todavía pendientes de esclarecimiento, bla bla bla'),
+(11, 'El Valencia gana al Real Madrid!', 'Después de 17 años ...');
+
+INSERT INTO COMENTARIOS (ORDEN, AUTOR, COMENTARIO, ID_NOTICIA) VALUES 
+(1, 'rufus', 'jajajaja', 10),
+(0, 'chinchan', 'ya era hora!!!!', 11),
+(0, 'bartolo', 'la culpa es del gobierno!', 10),
+(2, 'carlota', 'siempre igual!', 11),
+(1, 'koko', 'No me lom puedo creer! Seguro que el VAR-sa lo desperdicia...', 11);
+
 INSERT INTO ASIGNATURAS (ID, NOMBRE, CREDITOS) VALUES 
 (10, 'Matemáticas', 10),
 (13, 'Java SE', 8);

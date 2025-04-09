@@ -16,13 +16,17 @@ import com.sinensia.jpashowcase.ejemplo_03.Jugador;
 import com.sinensia.jpashowcase.ejemplo_04.Proveedor;
 import com.sinensia.jpashowcase.ejemplo_05.Alumno;
 import com.sinensia.jpashowcase.ejemplo_05.Asignatura;
+import com.sinensia.jpashowcase.ejemplo_06.Noticia;
+import com.sinensia.jpashowcase.ejemplo_07.Vehiculo;
 import com.sinensia.jpashowcase.repositories.AlumnoRepository;
 import com.sinensia.jpashowcase.repositories.AsignaturaRepository;
 import com.sinensia.jpashowcase.repositories.EquipoRepository;
 import com.sinensia.jpashowcase.repositories.JugadorRepository;
 import com.sinensia.jpashowcase.repositories.JugueteRepository;
 import com.sinensia.jpashowcase.repositories.LibroRepository;
+import com.sinensia.jpashowcase.repositories.NoticiaRepository;
 import com.sinensia.jpashowcase.repositories.ProveedorRepository;
+import com.sinensia.jpashowcase.repositories.VehiculoRepository;
 
 import jakarta.transaction.Transactional;
 
@@ -50,6 +54,22 @@ public class PruebasController {
 	
 	@Autowired
 	private AsignaturaRepository asignaturaRepository;
+	
+	@Autowired
+	private NoticiaRepository noticiaRepository;
+	
+	@Autowired
+	private VehiculoRepository vehiculoRepository;
+	
+	@GetMapping("/vehiculos")
+	public List<Vehiculo> getVehiculos(){
+		return vehiculoRepository.findAll();
+	}
+	
+	@GetMapping("/noticias")
+	public List<Noticia> getNoticias(){
+		return noticiaRepository.findAll();
+	}
 	
 	@GetMapping("/crear_juguetes")
 	@Transactional
