@@ -1,28 +1,22 @@
-package com.sinensia.jpashowcase.ejemplo_04;
+package com.sinensia.jpashowcase.ejemplo_05;
 
 import java.util.Objects;
 
-import jakarta.persistence.AttributeOverride;
-import jakarta.persistence.Column;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="PROVEEDORES")
-public class Proveedor {
-	
+@Table(name="ASIGNATURAS")
+public class Asignatura {
+
 	@Id
 	private Long id;
 	
 	private String nombre;
+	private int creditos;
 	
-	@Embedded
-	@AttributeOverride(name="poblacion", column=@Column(name="MUNICIPIO"))
-	private Direccion direccion;
-	
-	public Proveedor() {
+	public Asignatura() {
 		
 	}
 
@@ -42,12 +36,12 @@ public class Proveedor {
 		this.nombre = nombre;
 	}
 
-	public Direccion getDireccion() {
-		return direccion;
+	public int getCreditos() {
+		return creditos;
 	}
 
-	public void setDireccion(Direccion direccion) {
-		this.direccion = direccion;
+	public void setCreditos(int creditos) {
+		this.creditos = creditos;
 	}
 
 	@Override
@@ -63,7 +57,7 @@ public class Proveedor {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Proveedor other = (Proveedor) obj;
+		Asignatura other = (Asignatura) obj;
 		return Objects.equals(id, other.id);
 	}
 
