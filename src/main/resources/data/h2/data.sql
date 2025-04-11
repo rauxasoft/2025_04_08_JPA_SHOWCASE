@@ -50,13 +50,15 @@ INSERT INTO EQUIPOS (ID, NOMBRE, FECHA_FUNDACION) VALUES
 (50, 'F.C. Reus', '1907-11-15'),
 (51, 'Unio Esportiva Mollerusa', '1911-03-22');
 
-INSERT INTO JUGADORES (ID, NOMBRE, DORSAL, ID_EQUIPO) VALUES
-(1000, 'Honorio Sánchez', 1, 50),
-(1001, 'Carlos Sánchez', 2, 50),
-(1002, 'Roberto Sánchez', 3, 50),
-(1003, 'Agapito Ruiz', 1, 51),
-(1004, 'Carlitos Ruiz', 10, 51),
-(1005, 'José Ramón Moreno', 7, 51);
+INSERT INTO JUGADORES (ID, NOMBRE, APELLIDO1, APELLIDO2, DORSAL, ID_EQUIPO) VALUES
+(1000, 'Honorio','Sánchez','Puy', 1, 50),
+(1001, 'Carlos','Ramiro','Ferlosio', 2, 50),
+(1002, 'Roberto','Balardo','Cucurlo', 3, 50),
+(1003, 'Agapito','Roldán','Pallisó', 1, 51),
+(1004, 'Carlitos','Rui','Carapiña', 10, 51),
+(1005, 'José Ramón','Blanco','Moreno', 7, 51),
+(1006, 'Ot','Pi','Mas', 9, 51),
+(1007, 'Carlos','Batuso','Badiodelmonteverde', 6, 51);
 
 INSERT INTO LIBROS (ISBN, TITULO, NUMERO_PAGINAS, EXPLICITO) VALUES
 ('ES762555', 'La Biblia del F.C. Barcelona', 125, FALSE),
